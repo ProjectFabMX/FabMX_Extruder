@@ -1,11 +1,13 @@
 # FabMX Pellet Extruder
 Pellet extruder for 3d printing with MIM materials
 
-For details see http://fabmx.org/
+For details see 
+* https://wiki.fablab-muenchen.de/display/FABMX/FabMX+Pellet+Extruder
+* http://fabmx.org/
 
---
+---
 
-Copyright FabLab München e.V. 2021
+Copyright FabLab MÃ¼nchen e.V. 2021
 
 This source describes Open Hardware and is licensed under the CERN-OHL-P v2
 
