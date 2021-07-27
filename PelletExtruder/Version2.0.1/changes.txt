@@ -1,0 +1,11 @@
+2.0.1
+
+Top plate: 
+ change tabs to avoid thin spot
+ fix small issues with dog bone corners of tabs
+Kühlblock:
+ Change M16x2 thread to M16x1.5
+ Change G3/8" to M5 thread
+Drawing:
+ Add concentricity note
+ Use updated template
