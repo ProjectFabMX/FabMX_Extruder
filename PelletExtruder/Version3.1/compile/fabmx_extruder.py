@@ -348,7 +348,7 @@ sketch2.exportDxf("output/laser_plate2.dxf")
 sketch3.exportDxf("output/laser_plate3.dxf")
 
 
-'''
+
 assy = cad.Assembly()
 assy.add(plateFront)
 assy.add(plateBack)
@@ -358,6 +358,7 @@ assy.add(plate1)
 assy.add(plate2)
 assy.add(plate3)
 assy.add(inlet)
+#assy.add(funnel)
 assy.add(barrel)
 
 assy.cq().save("output/assembly.step","STEP")
@@ -384,7 +385,8 @@ plate1 = plate1.cq()
 plate2 = plate2.cq()
 plate3 = plate3.cq()
 inlet = inlet.cq()
+#funnel = funnel.cq()
 barrel = barrel.cq()
-'''
+
 
 echo("done")
