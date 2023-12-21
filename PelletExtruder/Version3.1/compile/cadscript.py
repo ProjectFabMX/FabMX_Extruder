@@ -135,7 +135,7 @@ def export_sketchDXF(
     s: cq.Sketch,
     fname: str,
     approx: Optional[Literal["spline", "arc"]] = None,
-    tolerance: float = 1e-2,
+    tolerance: float = 1e-6,
 ):
     """
     Export Sketch content to DXF. Works with 2D sections.
