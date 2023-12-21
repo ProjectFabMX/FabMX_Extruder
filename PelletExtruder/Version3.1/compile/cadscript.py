@@ -135,7 +135,7 @@ def export_sketchDXF(
     s: cq.Sketch,
     fname: str,
     approx: Optional[Literal["spline", "arc"]] = None,
-    tolerance: float = 1e-3,
+    tolerance: float = 1e-2,
 ):
     """
     Export Sketch content to DXF. Works with 2D sections.
@@ -232,22 +232,22 @@ class SketchObject:
         action = lambda x: x.circle(r, mode="s")
         return self.performAction(action, positions)
 
-    # add slot, which is rounded on the left right side. w is with without rounded part
+    # add slot, which is rounded on the left right side. w is width without rounded part
     def addSlot(self, w, h, angle=0, positions=None):
         action = lambda x: x.slot(w, h, angle=angle)
         return self.performAction(action, positions)
 
-    # cut slot, which is rounded on the left right side. w is with without rounded part
+    # cut slot, which is rounded on the left right side. w is width without rounded part
     def cutSlot(self, w, h, angle=0, positions=None):
         action = lambda x: x.slot(w, h, angle=angle, mode="s")
         return self.performAction(action, positions)
 
-    def addImportDxf(self, dxfFilename, positions=None):
-        action = lambda x: x.importDXF(dxfFilename)
+    def addImportDxf(self, dxfFilename, positions=None, tolerance=1e-6):
+        action = lambda x: x.importDXF(dxfFilename, tol=tolerance)
         return self.performAction(action, positions)
         
-    def cutImportDxf(self, dxfFilename, positions=None):
-        action = lambda x: x.importDXF(dxfFilename, mode="s")
+    def cutImportDxf(self, dxfFilename, positions=None, tolerance=1e-6):
+        action = lambda x: x.importDXF(dxfFilename, tol=tolerance, mode="s")
         return self.performAction(action, positions)    
         
     def fillet(self, edgesStr, amount):
