@@ -171,7 +171,7 @@ def sketchForPlateFrontBack(isFront):
   if isFront:
     sketch.cutRect(window_w, (window_bottom, window_top))
     if addLogo:
-        sketch.cutImportDxf("source/fabmax_logo.dxf",[(0,-70)])
+        sketch.cutImportDxf("source/fabmax_logo.dxf",[(0,96)])
 
   sketch.finalize()
   return sketch
