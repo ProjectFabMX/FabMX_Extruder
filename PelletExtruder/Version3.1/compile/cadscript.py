@@ -152,6 +152,7 @@ def export_sketchDXF(
     plane = w.plane
     
     dxf = ezdxf.new()
+    dxf.units = ezdxf.units.MM
     msp = dxf.modelspace()
 
     for f in s.faces():
